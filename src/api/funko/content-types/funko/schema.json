@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "funkos",
+  "info": {
+    "singularName": "funko",
+    "pluralName": "funkos",
+    "displayName": "Funko",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "productName": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "productName"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "stock": {
+      "type": "integer"
+    },
+    "fav": {
+      "type": "boolean"
+    },
+    "serie": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::serie.serie"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}
